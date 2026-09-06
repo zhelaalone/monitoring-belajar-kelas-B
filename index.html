@@ -20,17 +20,18 @@
     <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
     <script>
-       const firebaseConfig = {
-    apiKey: "AIzaSyC2FzR6v4zVKh1C4204BXC5CNC2Ferdp8M",
-    authDomain: "ijhad-b.firebaseapp.com",
-    databaseURL: "https://ijhad-b-default-rtdb.asia-southeast1.firebasedatabase.app/",
-    projectId: "ijhad-b",
-    storageBucket: "ijhad-b.firebasestorage.app",
-    messagingSenderId: "359568343176",
-    appId: "1:359568343176:web:2061e74be9811941549f3d"
-};
-firebase.initializeApp(firebaseConfig);
-const firebaseDb = firebase.database(); // Wajib pakai format ini agar terbaca script.js
+        const firebaseConfig = {
+            apiKey: "AIzaSyC2FzR6v4zVKh1C4204BXC5CNC2Ferdp8M",
+            authDomain: "ijhad-b.firebaseapp.com",
+            databaseURL: "https://ijhad-b-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "ijhad-b",
+            storageBucket: "ijhad-b.firebasestorage.app",
+            messagingSenderId: "359568343176",
+            appId: "1:359568343176:web:2061e74be9811941549f3d"
+        };
+        
+        firebase.initializeApp(firebaseConfig);
+        const firebaseDb = firebase.database(); // Wajib pakai format ini agar terbaca script.js
     </script>
     <!-- ========== [AKHIR FITUR BARU: FIREBASE SDK & CONFIG] ========== -->
 </head>
