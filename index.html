@@ -28,10 +28,9 @@
     storageBucket: "ijhad-b.firebasestorage.app",
     messagingSenderId: "359568343176",
     appId: "1:359568343176:web:2061e74be9811941549f3d"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
+};
+firebase.initializeApp(firebaseConfig);
+const firebaseDb = firebase.database(); // Wajib pakai format ini agar terbaca script.js
     </script>
     <!-- ========== [AKHIR FITUR BARU: FIREBASE SDK & CONFIG] ========== -->
 </head>
@@ -68,7 +67,7 @@
 <!-- SIDEBAR -->
     <aside class="sidebar">
         <div class="logo">
-            <h2><i class="fas fa-book-reader"></i> Ijhad-B</h2>
+            <h2><i class="fas fa-book-reader"></i> Ijhad-b</h2>
         </div>
         <nav>
             <ul class="nav-links">
@@ -1338,6 +1337,6 @@
         </div> <!-- Penutup content-container -->
     </main>
 
-    <script src="app.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
