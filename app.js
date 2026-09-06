@@ -4599,6 +4599,7 @@ function buatTabelStatistikPelajaranKelas(dataPerPelajaran) {
                     refreshDashboardBaru();
                 }
             });
+
         // 3. SINKRONISASI RIWAYAT ABSENSI (ANTI SALING TIMPA)
         firebaseDb.ref('riwayatAbsensi').on('value', snapshot => {
             const data = snapshot.val();
@@ -4611,6 +4612,19 @@ function buatTabelStatistikPelajaranKelas(dataPerPelajaran) {
                 }
             } else {
                 riwayatAbsensi = [];
+            }
+        });
+
+        // 4. SINKRONISASI DATA GURU DARI FIREBASE (ANTI BEDA DEVICE)
+        firebaseDb.ref('daftarGuru').on('value', snapshot => {
+            const data = snapshot.val();
+            if (data) {
+                daftarGuru = data; 
+                localStorage.setItem('daftarGuru', JSON.stringify(daftarGuru));
+                
+                if (halamanAktif === "data-guru" && typeof renderTabelGuru === 'function') {
+                    renderTabelGuru();
+                }
             }
         });
     }
